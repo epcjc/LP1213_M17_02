@@ -15,7 +15,15 @@ namespace Development_ControlStock_LP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Login Login = new Login();
+
+            Login.ShowDialog();
+
+            if (Login.logado)
+            {
+                Application.Run(new Bem_Vindo());
+
+            }
         }
     }
 }

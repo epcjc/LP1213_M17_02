@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Development_ControlStock_LP
 {
-    public partial class Form1 : Form
+    public partial class Bem_Vindo : Form
     {
-        public Form1()
+        public Bem_Vindo()
         {
             InitializeComponent();
         }
