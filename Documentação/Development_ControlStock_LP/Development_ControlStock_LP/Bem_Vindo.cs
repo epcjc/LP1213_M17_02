@@ -15,5 +15,26 @@ namespace Development_ControlStock_LP
         {
             InitializeComponent();
         }
+
+        private void Bem_Vindo_Load(object sender, EventArgs e)
+        {
+            timer1_Tick(e, e);
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime datahora = DateTime.Now;
+            lbDateTime.Text = "Data: "+datahora.ToShortDateString() + " Hora: "+ datahora.ToLongTimeString();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

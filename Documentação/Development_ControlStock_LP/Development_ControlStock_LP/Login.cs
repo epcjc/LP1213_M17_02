@@ -13,7 +13,7 @@ namespace Development_ControlStock_LP
     public partial class Login : Form
     {
         SqlConnection sqlConn = null;
-        private string strConn = @"Data Source=.\SQLEXPRESS;AttachDbFilename="C:\Users\Dário Moreira\Documents\GitHub\LP1213_M17_02\Documentação\Development_ControlStock_LP\Development_ControlStock_LP\Database1.mdf";Integrated Security=True;User Instance=True";
+        private string strConn = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;User Instance=True";
         private string _Sql = string.Empty;
 
         public bool logado = false;
@@ -22,7 +22,7 @@ namespace Development_ControlStock_LP
             InitializeComponent();
         }
 
-        public void logar()
+        public bool logar()
         {
             sqlConn = new SqlConnection(strConn);
             string usu, pwd;
@@ -32,7 +32,7 @@ namespace Development_ControlStock_LP
                 usu = TB_Utilizador.Text;
                 pwd = TB_Senha.Text;
 
-                _Sql = "SELECT COUNT(ID_Utilizador) FROM Nome WHERE Nome = @Nome AND Senha = @Senha";
+                _Sql = "SELECT COUNT(ID_Utilizador) FROM TB_Utilizador WHERE Nome = @Nome AND Senha = @Senha";
 
                 SqlCommand cmd = new SqlCommand(_Sql,sqlConn);
 
@@ -41,33 +41,54 @@ namespace Development_ControlStock_LP
 
                 sqlConn.Open();
 
-                int v = (int)cmd.ExecuteScalar();
+                int v = (int) cmd.ExecuteScalar();
 
                 if (v > 0)
-                {
-                    MessageBox.Show("Entrou com Sucesso");
+                {                  
                     logado = true;
                 }
                 else
                 {
-                    logado = false;
-                    this.Dispose();
+                    logado = false;                        
                 }
 
             }catch(SqlException erro)
             {
-                MessageBox.Show(erro+"Na Base dados");
+                MessageBox.Show(erro.Message);
             }
+
+            return logado;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            logar();
+             if (logar())
+            {
+                Bem_Vindo frm = new Bem_Vindo();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Acesso não permitido");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TB_Senha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                logar();
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
