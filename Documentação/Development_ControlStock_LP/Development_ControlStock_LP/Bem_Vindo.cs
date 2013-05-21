@@ -32,29 +32,10 @@ namespace Development_ControlStock_LP
             lbDateTime.Text = "Data: " + datahora.ToShortDateString() + " Hora: " + datahora.ToLongTimeString();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void toolStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
-
-        private void toolStrip1_ItemClicked_2(object sender, ToolStripItemClickedEventArgs e)
-        {
-            
+         
         }
-    }
 }
