@@ -19,6 +19,16 @@ namespace Development_ControlStock_LP
         private void Bem_Vindo_Load(object sender, EventArgs e)
         {
             timer1_Tick(e, e);
+            sisDBADM test = new sisDBADM();
+
+            if (test.Conectar())
+            {
+                MessageBox.Show("Ligou-se");
+            }
+            else
+            {
+                MessageBox.Show(" Não se Ligou");
+            }
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -31,10 +41,9 @@ namespace Development_ControlStock_LP
             DateTime datahora = DateTime.Now;
             lbDateTime.Text = "Data: " + datahora.ToShortDateString() + " Hora: " + datahora.ToLongTimeString();
         }
-
-        private void toolStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
          
         }

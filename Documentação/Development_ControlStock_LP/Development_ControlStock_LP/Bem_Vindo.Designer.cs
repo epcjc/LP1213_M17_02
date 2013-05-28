@@ -49,6 +49,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.listaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,15 +70,16 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(572, 203);
+            this.panel2.Size = new System.Drawing.Size(568, 210);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.Location = new System.Drawing.Point(0, 178);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 185);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(572, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(568, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked_1);
@@ -101,6 +103,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Sair";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // menuStrip1
             // 
@@ -110,7 +113,7 @@
             this.inventarioToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(572, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(568, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -172,6 +175,8 @@
             // 
             // inventarioToolStripMenuItem1
             // 
+            this.inventarioToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaToolStripMenuItem});
             this.inventarioToolStripMenuItem1.Name = "inventarioToolStripMenuItem1";
             this.inventarioToolStripMenuItem1.Size = new System.Drawing.Size(72, 20);
             this.inventarioToolStripMenuItem1.Text = "Inventario";
@@ -209,11 +214,17 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // listaToolStripMenuItem
+            // 
+            this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
+            this.listaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listaToolStripMenuItem.Text = "Lista";
+            // 
             // Bem_Vindo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 203);
+            this.ClientSize = new System.Drawing.Size(568, 210);
             this.Controls.Add(this.panel2);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -251,6 +262,7 @@
         private System.Windows.Forms.ToolStripMenuItem listarProdutosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripMenuItem listaToolStripMenuItem;
 
     }
 }
