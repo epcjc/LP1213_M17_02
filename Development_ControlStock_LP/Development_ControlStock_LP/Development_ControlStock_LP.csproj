@@ -78,6 +78,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Listar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listar.Designer.cs">
+      <DependentUpon>Listar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bem_Vindo.resx">
       <DependentUpon>Bem_Vindo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listar.resx">
+      <DependentUpon>Listar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -18,13 +18,41 @@ namespace Development_ControlStock_LP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this..Insert(textBox1.Text, Convert.ToInt16(.SelectedValue), Convert.ToInt16(textBox2.Text));
+           
+                this.tB_FornecedorTableAdapter.Insert(this.textBox1.Text, Convert.ToInt32(this.textBox2.Text), this.textBox3.Text);
+                MessageBox.Show("Inserido novo cliente");
+           
+            
         }
 
         private void Add_New_Fornecedor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bDDataSet.Pais' table. You can move, or remove it, as needed.
-            //this..Fill(this..Pais);
+            // TODO: This line of code loads data into the 'database1DataSet.TB_Fornecedor' table. You can move, or remove it, as needed.
+            this.tB_FornecedorTableAdapter.Fill(this.database1DataSet.TB_Fornecedor);
+            // TODO: This line of code loads data into the 'database1DataSet.TB_Fornecedor' table. You can move, or remove it, as needed.
+            this.tB_FornecedorTableAdapter.Fill(this.database1DataSet.TB_Fornecedor);
+        
+        }
+
+        private void tB_FornecedorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tB_FornecedorBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+
+        }
+
+        private void tB_FornecedorBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tB_FornecedorBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

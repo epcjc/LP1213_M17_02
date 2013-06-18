@@ -38,7 +38,8 @@ namespace Development_ControlStock_LP
 
         private void criarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Add_New_Fornecedor trm = new Add_New_Fornecedor();
+            trm.ShowDialog();
         }
 
         private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +63,17 @@ namespace Development_ControlStock_LP
         }
 
         private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forcedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listar trm = new Listar();
+            trm.ShowDialog();
+        }
+
+        private void listarProdutosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

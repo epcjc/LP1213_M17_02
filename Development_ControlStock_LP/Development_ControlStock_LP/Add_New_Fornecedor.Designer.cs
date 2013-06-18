@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.database1DataSet = new Development_ControlStock_LP.Database1DataSet();
+            this.tB_FornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tB_FornecedorTableAdapter = new Development_ControlStock_LP.Database1DataSetTableAdapters.TB_FornecedorTableAdapter();
+            this.tableAdapterManager = new Development_ControlStock_LP.Database1DataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB_FornecedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,15 +72,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Morada";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Email";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(103, 39);
@@ -97,13 +93,6 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 10;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(103, 117);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(13, 163);
@@ -122,6 +111,31 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tB_FornecedorBindingSource
+            // 
+            this.tB_FornecedorBindingSource.DataMember = "TB_Fornecedor";
+            this.tB_FornecedorBindingSource.DataSource = this.database1DataSet;
+            // 
+            // tB_FornecedorTableAdapter
+            // 
+            this.tB_FornecedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TB_ComprasDetalhesTableAdapter = null;
+            this.tableAdapterManager.TB_ComprasTableAdapter = null;
+            this.tableAdapterManager.TB_FornecedorTableAdapter = this.tB_FornecedorTableAdapter;
+            this.tableAdapterManager.TB_ProdutoTableAdapter = null;
+            this.tableAdapterManager.TB_UtilizadorTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Development_ControlStock_LP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Add_New_Fornecedor
             // 
@@ -130,17 +144,17 @@
             this.ClientSize = new System.Drawing.Size(282, 197);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Add_New_Fornecedor";
             this.Text = "Add_New_Fornecedor";
             this.Load += new System.EventHandler(this.Add_New_Fornecedor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB_FornecedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,13 +165,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource tB_FornecedorBindingSource;
+        private Database1DataSetTableAdapters.TB_FornecedorTableAdapter tB_FornecedorTableAdapter;
+        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
 
     }
 }
