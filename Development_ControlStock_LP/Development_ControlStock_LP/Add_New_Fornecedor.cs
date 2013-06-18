@@ -18,10 +18,15 @@ namespace Development_ControlStock_LP
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
                 this.tB_FornecedorTableAdapter.Insert(this.textBox1.Text, Convert.ToInt32(this.textBox2.Text), this.textBox3.Text);
                 MessageBox.Show("Inserido novo cliente");
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro a inserir");
+            }
             
         }
 

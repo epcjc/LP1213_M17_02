@@ -131,7 +131,6 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.TB_ComprasDetalhesTableAdapter = null;
-            this.tableAdapterManager.TB_ComprasTableAdapter = null;
             this.tableAdapterManager.TB_FornecedorTableAdapter = this.tB_FornecedorTableAdapter;
             this.tableAdapterManager.TB_ProdutoTableAdapter = null;
             this.tableAdapterManager.TB_UtilizadorTableAdapter = null;
