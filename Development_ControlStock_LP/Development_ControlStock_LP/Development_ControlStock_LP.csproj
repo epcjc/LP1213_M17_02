@@ -61,33 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_Compra.Designer.cs">
-      <DependentUpon>Add_Compra.cs</DependentUpon>
-    </Compile>
     <Compile Include="Add_New_Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Add_New_Fornecedor.Designer.cs">
       <DependentUpon>Add_New_Fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_Produto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_Produto.Designer.cs">
-      <DependentUpon>Add_Produto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bem_Vindo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bem_Vindo.Designer.cs">
       <DependentUpon>Bem_Vindo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Database1DataSet.cs">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -108,14 +92,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add_Compra.resx">
-      <DependentUpon>Add_Compra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Add_New_Fornecedor.resx">
       <DependentUpon>Add_New_Fornecedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Add_Produto.resx">
-      <DependentUpon>Add_Produto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bem_Vindo.resx">
       <DependentUpon>Bem_Vindo.cs</DependentUpon>
